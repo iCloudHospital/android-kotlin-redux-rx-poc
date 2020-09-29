@@ -2,6 +2,7 @@ package com.example.androidreduxrxpoc
 
 data class AppState(
     val visibilityFilter: VisibilityFilter = VisibilityFilter.SHOW_ALL,
+    // Todo type found in ./Actions.kt
     val todos: List<Todo> = listOf(
         Todo(
             text = "Consider using Redux",
@@ -14,6 +15,7 @@ data class AppState(
     )
 )
 
+// VisibilityFilter found in ./Actions.kt
 fun visibilityFilterReducer(state: VisibilityFilter, action: Any) =
     when (action) {
         is SetVisibilityFilter -> action.filter
