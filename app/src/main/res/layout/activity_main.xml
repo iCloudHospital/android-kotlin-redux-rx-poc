@@ -9,7 +9,23 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="681dp"
         android:scrollbars="vertical"
         app:layoutManager="LinearLayoutManager" />
+
+    <EditText
+        android:id="@+id/text_add_todo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_gravity="bottom|start"
+        tools:text="Todo Item" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:text="Add Todo" />
 </FrameLayout>
