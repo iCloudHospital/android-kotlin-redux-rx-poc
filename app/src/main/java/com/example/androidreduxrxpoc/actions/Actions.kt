@@ -1,4 +1,4 @@
-package com.example.androidreduxrxpoc
+package com.example.androidreduxrxpoc.actions
 
 // Create actions
 data class AddTodo(val text: String)

@@ -1,4 +1,6 @@
-package com.example.androidreduxrxpoc
+package com.example.androidreduxrxpoc.reducers
+
+import com.example.androidreduxrxpoc.actions.*
 
 data class AppState(
     val visibilityFilter: VisibilityFilter = VisibilityFilter.SHOW_ALL,
