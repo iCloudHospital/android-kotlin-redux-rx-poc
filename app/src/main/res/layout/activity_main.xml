@@ -15,15 +15,15 @@
 
     <EditText
         android:id="@+id/text_add_todo"
-        android:layout_width="wrap_content"
+        android:layout_width="318dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
         android:ems="10"
         android:inputType="textPersonName"
-        android:layout_gravity="bottom|start"
         tools:text="Todo Item" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
