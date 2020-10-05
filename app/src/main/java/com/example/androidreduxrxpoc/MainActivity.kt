@@ -33,7 +33,6 @@ class MainActivity : AppCompatActivity() {
         val textBox: EditText = findViewById(R.id.text_add_todo)
         val text = textBox.text.toString()
         store.dispatch(AddTodo(text))
-        println(store.state.todos)
         textBox.text.clear()
     }
 }
