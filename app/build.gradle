@@ -21,14 +21,26 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
+        dev {
+            applicationIdSuffix ".dev"
+            debuggable true
+            versionNameSuffix "-dev"
+        }
+
+        stg {
+            initWith debug
+            applicationIdSuffix ".stg"
+            versionNameSuffix "-stg"
+        }
     }
 }
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.3.1'
-    implementation 'com.google.android.material:material:1.2.0'
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     implementation "org.reduxkotlin:redux-kotlin-threadsafe-jvm:0.5.5"
     implementation "io.github.cdimascio:dotenv-kotlin:6.2.1"
