@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
         storeSubscription = store.subscribe { Datasource().loadTodos() }
         var myDataset = store.state.todos
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
-
         recyclerView.setHasFixedSize(true)
         val button: Button = findViewById(R.id.btn_add)
         button.setOnClickListener {
