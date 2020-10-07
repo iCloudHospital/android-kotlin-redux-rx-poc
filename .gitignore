@@ -12,7 +12,4 @@
 /captures
 .externalNativeBuild
 .cxx
-.env.prd
-.env
-.env.dev
-.env.stg
+app/gradle.properties
