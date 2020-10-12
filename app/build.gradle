@@ -3,6 +3,14 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
+    signingConfigs {
+        test {
+            storeFile file('/Users/coreylanier/keystore')
+            storePassword 'packy147'
+            keyAlias 'key0'
+            keyPassword 'packy147'
+        }
+    }
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
 
@@ -30,6 +38,7 @@ android {
             debuggable true
             versionNameSuffix "-dev"
             buildConfigField 'String', 'STAGE', "\"${DEV_STAGE}\""
+            signingConfig signingConfigs.test
         }
 
         stg {
@@ -46,10 +55,9 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'com.google.android.material:material:1.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
     implementation "org.reduxkotlin:redux-kotlin-threadsafe-jvm:0.5.5"
-    implementation "io.github.cdimascio:dotenv-kotlin:6.2.1"
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
