@@ -57,11 +57,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
     implementation "org.reduxkotlin:redux-kotlin-threadsafe-jvm:0.5.5"
-    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
-    implementation "io.reactivex.rxjava3:rxkotlin:3.0.1"
-    implementation "io.reactivex.rxjava3:rxjava:3.0.7"
-    implementation 'com.jakewharton.rxbinding4:rxbinding:4.0.0'
-    implementation 'com.jakewharton.rxbinding4:rxbinding-material:4.0.0'
+    implementation 'com.airbnb.android:mvrx:2.0.0-beta1'
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
