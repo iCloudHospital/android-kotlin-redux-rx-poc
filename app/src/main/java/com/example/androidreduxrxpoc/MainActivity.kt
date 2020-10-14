@@ -5,11 +5,28 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.airbnb.mvrx.BaseMvRxViewModel
+import com.airbnb.mvrx.MvRxState
 import com.example.androidreduxrxpoc.actions.AddTodo
+import com.example.androidreduxrxpoc.actions.Todo
 import com.example.androidreduxrxpoc.adapter.ItemAdapter
 import com.example.androidreduxrxpoc.data.Datasource
 import com.example.androidreduxrxpoc.stores.store
 import org.reduxkotlin.StoreSubscription
+
+data class TodosState(val todos: List<Todo> = listOf()) : MvRxState
+
+class TodosViewModel( state: TodosState ) : BaseMvRxViewModel<TodosState>(state, debugMode = true) {
+    init {
+        fetchTodos()
+    }
+
+    private fun fetchTodos() {
+        setState { copy(todos = store.state.todos)}
+    }
+
+}
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var storeSubscription: StoreSubscription
